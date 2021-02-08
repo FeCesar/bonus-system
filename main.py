@@ -1,9 +1,11 @@
 import pandas as pd
 import openpyxl as op
+import os
 from twilio.rest import Client
 
-account_sid = "ACc6bbdd588bb30e1c81b68e8aa95c659c"
-auth_token = "69792ae172842a10d1172990d8c4fe59"
+account_sid = os.environ['TWILIO_ACCOUNT_SID']
+auth_token = os.environ['TWILIO_AUTH_TOKEN']
+
 client = Client(account_sid, auth_token)
 
 mouthsList = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho']
